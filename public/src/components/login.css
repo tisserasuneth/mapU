@@ -30,7 +30,7 @@
 
 .login-btn{
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     color: white;
     background-color: rgb(39, 192, 247);
@@ -50,4 +50,6 @@
 
 .textFields{
     width: 200px; 
+    padding: 10px;
+    border-bottom-color: black;
 }

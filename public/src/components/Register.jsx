@@ -88,9 +88,9 @@ export default function Register({setShowRegister,locStorage, setCurrentUser}) {
                 MapU
             </div>
             <form className='registerForm' onSubmit={(event)=>handleSubmit(event)}>
-            <input type="text" placeholder="Username" ref={nameRef} />
-            <input type="email" placeholder="Email Address" ref={emailRef} />
-            <input type="password" placeholder="Password" ref={passwordRef} />
+            <input className='textFields' type="text" placeholder="Username" ref={nameRef} />
+            <input className='textFields' type="email" placeholder="Email Address" ref={emailRef} />
+            <input className='textFields' type="password" placeholder="Password" ref={passwordRef} />
             <button className="register-btn">Register</button>
             
  

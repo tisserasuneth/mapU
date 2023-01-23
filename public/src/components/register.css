@@ -2,7 +2,7 @@
     width: 300px;
     height: 300px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: white;
     position: absolute;
     top:0;
@@ -30,7 +30,7 @@
 
 .register-btn{
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     color: white;
     background-color: rgb(39, 192, 247);
