@@ -6,7 +6,7 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function Register({setShowRegister,locStorage, setCurrentUser}) {
+export default function Register({setShowRegister, setShowLogin, locStorage, setCurrentUser}) {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -79,8 +79,11 @@ export default function Register({setShowRegister,locStorage, setCurrentUser}) {
         }
         return true;
       }
+      const switchUp = () =>{
+        setShowLogin(true)
+        setShowRegister(false)
+      }
 
-    
     return(
         <div className="registerContainer">
             <div className="logo">
@@ -88,12 +91,11 @@ export default function Register({setShowRegister,locStorage, setCurrentUser}) {
                 MapU
             </div>
             <form className='registerForm' onSubmit={(event)=>handleSubmit(event)}>
-            <input className='textFields' type="text" placeholder="Username" ref={nameRef} />
-            <input className='textFields' type="email" placeholder="Email Address" ref={emailRef} />
-            <input className='textFields' type="password" placeholder="Password" ref={passwordRef} />
-            <button className="register-btn">Register</button>
-            
- 
+              <input className='textFields' type="text" placeholder="Username" ref={nameRef} />
+              <input className='textFields' type="email" placeholder="Email Address" ref={emailRef} />
+              <input className='textFields' type="password" placeholder="Password" ref={passwordRef} />
+              <button className="register-btn">Register</button>
+              <span className='switchUser'>Already a user? <button className='switchUserLink' onClick={() => switchUp()}>Login</button></span>
             </form>
             <CancelIcon className='registerCancel' onClick={()=>setShowRegister(false)}/>
             <ToastContainer/>

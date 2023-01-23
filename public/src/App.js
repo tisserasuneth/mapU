@@ -19,6 +19,7 @@ function App() {
   const [showRegister,setShowRegister] = useState(false);
   const [showLogin,setShowLogin] = useState(false);
 
+
   const [viewState, setViewState] = useState({
     longitude: -10,
     latitude: 35,
@@ -170,8 +171,8 @@ function App() {
           }}>Register</button>
     </div>
       )}
-      {showRegister && <Register setShowRegister={setShowRegister} locStorage={locStorage} setCurrentUser={setCurrentUser}/>}
-      {showLogin && <Login setShowLogin={setShowLogin} locStorage={locStorage} setCurrentUser={setCurrentUser}/>}
+      {showRegister && <Register setShowRegister={setShowRegister} setShowLogin={setShowLogin} locStorage={locStorage} setCurrentUser={setCurrentUser}/>}
+      {showLogin && <Login setShowLogin={setShowLogin} setShowRegister={setShowRegister} locStorage={locStorage} setCurrentUser={setCurrentUser}/>}
     </Map> 
   );
 }

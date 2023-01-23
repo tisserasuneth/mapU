@@ -6,7 +6,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function Login({setShowLogin,locStorage, setCurrentUser}){
+export default function Login({setShowLogin,setShowRegister, locStorage, setCurrentUser}){
     const nameRef = useRef();
     const passwordRef = useRef();
 
@@ -61,6 +61,10 @@ export default function Login({setShowLogin,locStorage, setCurrentUser}){
         return true;
       }
 
+      const switchUp = () =>{
+        setShowLogin(false)
+        setShowRegister(true)
+      }
     
     return(
         <div className="loginContainer">
@@ -69,9 +73,10 @@ export default function Login({setShowLogin,locStorage, setCurrentUser}){
                 MapU
             </div>
             <form className='loginForm' onSubmit={(event)=>handleSubmit(event)}>
-            <input className='textFields' type="text" placeholder="Username" ref={nameRef}/>
-            <input className='textFields' type="password" placeholder="Password"ref={passwordRef}/>
-            <button className="login-btn">Login</button>
+              <input className='textFields' type="text" placeholder="Username" ref={nameRef}/>
+              <input className='textFields' type="password" placeholder="Password"ref={passwordRef}/>
+              <button className="login-btn">Login</button>
+              <span className='switchUser'>Don't have an account? <button className='switchUserLink' onClick={() => switchUp()}>Register</button></span>
             </form>
             <CancelIcon className='loginCancel' onClick={()=>setShowLogin(false)}/>
             <ToastContainer/>
