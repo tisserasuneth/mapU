@@ -69,8 +69,8 @@ export default function Login({setShowLogin,locStorage, setCurrentUser}){
                 MapU
             </div>
             <form className='loginForm' onSubmit={(event)=>handleSubmit(event)}>
-            <input type="text" placeholder="Username" ref={nameRef}/>
-            <input type="password" placeholder="Password"ref={passwordRef}/>
+            <input className='textFields' type="text" placeholder="Username" ref={nameRef}/>
+            <input className='textFields' type="password" placeholder="Password"ref={passwordRef}/>
             <button className="login-btn">Login</button>
             </form>
             <CancelIcon className='loginCancel' onClick={()=>setShowLogin(false)}/>

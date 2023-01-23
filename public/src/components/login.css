@@ -17,7 +17,6 @@
 
 .loginForm{
     padding: 0;
-
 }
 
 .logo{
@@ -47,4 +46,8 @@
     position: relative;
     bottom:190px;
     left:150px;
+}
+
+.textFields{
+    width: 200px; 
 }
