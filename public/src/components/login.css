@@ -1,8 +1,8 @@
 .loginContainer{
     width: 300px;
-    height: 200px;
+    height: 300px;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: white;
     position: absolute;
     top:0;
@@ -63,7 +63,7 @@
 
 .loginCancel{
     position: relative;
-    bottom:190px;
+    bottom:290px;
     left:150px;
 }
 
