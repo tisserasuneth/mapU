@@ -25,4 +25,3 @@ app.use('/api/users',userRoute)
 app.listen(9000,()=>{
     console.log('Server is Running')
 })
-
